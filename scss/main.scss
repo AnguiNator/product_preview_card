@@ -1,0 +1,39 @@
+$color-black: #1C232B;
+$color-grey: #6C7289;
+$color-cream: #F2EAE2;
+$color-white: #FFFFFF;
+$color-green-500: #3D8168;
+$color-green-700: #1A4032;
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-fraunce: "Fraunces", serif;
+$font-size-32: 3.2rem;
+$font-size-14: 1.4rem;
+$font-size-13: 1.3rem;
+$font-size-12: 1.2rem;
+$font-line-height-100: 1;
+$font-line-height-110: 1.1;
+$font-line-height-120: 1.2;
+$font-line-height-160: 1.6;
+$font-letter-spacing-0: 0;
+$font-letter-spacing-5: 5px;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$space-40: 40px;
+$space-32: 32px;
+$space-24: 24px;
+$space-16: 16px;
+$space-8: 8px;
+$space-4: 4px;
+
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
