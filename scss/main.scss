@@ -25,15 +25,158 @@ $space-16: 16px;
 $space-8: 8px;
 $space-4: 4px;
 
+@mixin tablet {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}
 
+@mixin desktop {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
+}
+
+@mixin flexbox($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
 
 
 html {
     font-size: 62.5%;
+    font-family: $font-family-montserrat;
+    height: 100vh;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $color-cream;
+    height: 100%;
+    align-content: center;
+}
+
+
+.card_component {
+    width: 350px;
+    @include flexbox(column, 0);
+    overflow: hidden;
+    border-radius: 15px;
+    margin: auto;
+
+    @include tablet() {
+        width: fit-content;
+        height: 630px;
+        @include flexbox(row, 0);
+    }
+
+    .card_img {
+        width: 100%;
+        height: 342px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include tablet() {
+            width: 300px;
+            height: 100%;
+        }
+
+    }
+
+    .card_content {
+        @include flexbox(column, $space-24 );
+        padding: $space-32;
+        background-color: $color-white;
+
+        @include tablet() {
+            gap: $space-32;
+        }
+
+        .card_title {
+            @include flexbox(column, $space-24 );
+
+            @include tablet() {
+                width: 236px;
+            }
+
+            p {
+                font-weight: $font-weight-medium;
+                font-size: $font-size-12;
+                line-height: $font-line-height-120;
+                letter-spacing: $font-letter-spacing-5;
+                color: $color-grey;
+            }
+
+            h1 {
+                font-family: $font-family-fraunce;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-32;
+                line-height: $font-line-height-100;
+                letter-spacing: $font-letter-spacing-0;
+                color: $color-black;
+            }
+
+            .card_title-description {
+                font-weight: $font-weight-medium;
+                font-size: $font-size-14;
+                line-height: $font-line-height-160;
+                letter-spacing: $font-letter-spacing-0;
+                color: $color-grey;
+            }
+        }
+
+        .card_price {
+            @include flexbox(row, $space-16 );
+
+            p {
+                font-family: $font-family-fraunce;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-32;
+                line-height: $font-line-height-100;
+                letter-spacing: $font-letter-spacing-0;
+                color: $color-green-500;
+            }
+
+            s {
+                font-weight: $font-weight-medium;
+                font-size: $font-size-13;
+                line-height: $font-line-height-120;
+                letter-spacing: $font-letter-spacing-0;
+                color: $color-grey;
+            }
+        }
+
+        .card_button {
+            button {
+                width: 100%;
+                background-color: $color-green-500;
+                padding: $space-16 $space-32;
+                border-radius: $space-8;
+                color: $color-white;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-14;
+                line-height: $font-line-height-110;
+                letter-spacing: $font-letter-spacing-0;
+                border: none;
+
+                img {
+                    margin-right: $space-8;
+                }
+            }
+
+            @include desktop() {
+                button:hover {
+                    background-color: $color-green-700;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

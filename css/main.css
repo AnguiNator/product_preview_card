@@ -1,9 +1,135 @@
 html {
   font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #F2EAE2;
+  height: 100%;
+  align-content: center;
+}
+
+.card_component {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: auto;
+}
+@media screen and (min-width: 48em) {
+  .card_component {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 630px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.card_component .card_img {
+  width: 100%;
+  height: 342px;
+}
+.card_component .card_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 48em) {
+  .card_component .card_img {
+    width: 300px;
+    height: 100%;
+  }
+}
+.card_component .card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 48em) {
+  .card_component .card_content {
+    gap: 32px;
+  }
+}
+.card_component .card_content .card_title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 48em) {
+  .card_component .card_content .card_title {
+    width: 236px;
+  }
+}
+.card_component .card_content .card_title p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  color: #6C7289;
+}
+.card_component .card_content .card_title h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #1C232B;
+}
+.card_component .card_content .card_title .card_title-description {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #6C7289;
+}
+.card_component .card_content .card_price {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.card_component .card_content .card_price p {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #3D8168;
+}
+.card_component .card_content .card_price s {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #6C7289;
+}
+.card_component .card_content .card_button button {
+  width: 100%;
+  background-color: #3D8168;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+  border: none;
+}
+.card_component .card_content .card_button button img {
+  margin-right: 8px;
+}
+@media screen and (min-width: 64em) {
+  .card_component .card_content .card_button button:hover {
+    background-color: #1A4032;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=main.css.map */
